@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Bora de rolê.css" media="screen">
+    <title>Bora de rolê?</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <p>Bora de rolê?</p>
+    <button id="change"> Não </button>
+    <button class="hidden" id="move"> Não </button>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+    <script>
+        $("#change").click(function() {
+            $("#change").html("Sim");
+            $("#move").show();
+            Swal.fire({
+            title: 'SEXTA FEIRA ENTÃO?!',
+            text: 'PARTIU!',
+            imageUrl: 'https://www.nerdsite.com.br/wp-content/uploads/2022/04/jujutsu-kaisen-sukuna.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+            })
+            
+        });
+        
+        $("#move").hover(function() {
+            change();
+        });
+        function change()
+        {
+            var i = Math.floor(Math.random()*500)+1;
+            var j = Math.floor(Math.random()*100)+1;
+            $("#move").css({top: j+'px', left:       i+'px'});
+        }
+    </script>
+</body>
+</html>
